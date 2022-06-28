@@ -15,5 +15,6 @@ def run():
     square_roots = {i: round(pow(i, 0.5), 2) for i in range(1, 1001)}
     print(square_roots)
 
+
 if __name__ == '__main__':
     run()
