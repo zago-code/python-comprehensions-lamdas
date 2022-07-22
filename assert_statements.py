@@ -8,9 +8,15 @@ def divisors(num):
 
 def run():
     num = input("Ingresa un número: ")
-    assert num.isnumeric(), "Debes ingresar un número"
-    print(divisors(int(num)))
-    print("Terminó el programa")
+    try:
+        if num.startswith("-") or num == '0':
+            raise ValueError("Ingrese un número mayor que cero")
+    except ValueError as ve:
+        print(ve)
+    else:
+        assert num.isnumeric(), "Debes ingresar un número"
+        print(divisors(int(num)))
+        print("Terminó el programa")
 
 
 if __name__ == '__main__':
